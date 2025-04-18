@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAPOR! - Form Pengaduan</title>
+    <link rel="stylesheet" href="ta.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Layanan Aspirasi dan Pengaduan Online Rakyat</h1>
+            <p>Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="form-container">
+            <h2>Sampaikan Laporan Anda</h2>
+            <form id="laporForm">
+                <div class="form-group">
+                    <label>Pilih Klasifikasi Laporan:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="klasifikasi" value="pengaduan" checked> Pengaduan</label>
+                        <label><input type="radio" name="klasifikasi" value="aspirasi"> Aspirasi</label>
+                        <label><input type="radio" name="klasifikasi" value="informasi"> Permintaan Informasi</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="judul">Judul Laporan Anda *</label>
+                    <input type="text" id="judul" name="judul" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="isi">Isi Laporan Anda *</label>
+                    <textarea id="isi" name="isi" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="tanggal">Pilih Tanggal Kejadian *</label>
+                    <input type="date" id="tanggal" name="tanggal" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="lokasi">Lokasi Kejadian *</label>
+                    <input type="text" id="lokasi" name="lokasi" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="instansi">Nama Instansi Tujuan *</label>
+                    <select id="instansi" name="instansi" required>
+                        <option value="">-- Pilih Instansi --</option>
+                        <option value="kemendikbud">Kementerian Pendidikan</option>
+                        <option value="kemenkes">Kementerian Kesehatan</option>
+                        <option value="kominfo">Kementerian Komunikasi</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="kategori">Kategori Laporan Anda *</label>
+                    <select id="kategori" name="kategori" required>
+                        <option value="">-- Pilih Kategori --</option>
+                        <option value="layanan">Layanan Publik</option>
+                        <option value="infrastruktur">Infrastruktur</option>
+                        <option value="administrasi">Administrasi</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="lampiran">Upload Lampiran</label>
+                    <input type="file" id="lampiran" name="lampiran">
+                </div>
+
+                <div class="form-group">
+                    <label>Privasi:</label>
+                    <label><input type="radio" name="privasi" value="anonim"> Anonim</label>
+                    <label><input type="radio" name="privasi" value="rahasia"> Rahasia</label>
+                </div>
+
+                <button type="submit">LAPORKAN</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
